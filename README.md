@@ -3,14 +3,13 @@
 ## Control Overview
 This control is an OptionSet control for model driven app (D365), which will display all options as clickable buttons with colorful background set for the options inside OptionSet. It is best works for alert types or Yes No optionsets with color coding. This control dynamically sets the buttons based on options in optionset.
 
-![alternativetext](readmeimages/imgnewOptionsetex.png)
-
-![alternativetext](readmeimages/imgOptionsetnew.png)
-
 ## Install
- - Download the latest version of the solution from solution folder ![release](Solutions/)
+ - Download the latest version of the solution from solution folder !
  - Import the solution to your Dynamics 365 instance
 
+## DEBUG
+ - For debugging and creating your own version you do these steps
+ 
 ## Control Registration Steps 
  - After import of the control the control is available in the list of available controls
 ![alternativetext](readmeimages/imgOptionSetControlSelect.png)

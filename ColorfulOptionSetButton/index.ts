@@ -23,7 +23,7 @@ export class ColorfulOptionSetButton
   /**
    * Empty constructor.
    */
-  constructor() {}
+  constructor() { }
 
   /**
    * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -97,15 +97,14 @@ export class ColorfulOptionSetButton
           i
         ] as HTMLButtonElement;
 
-        if (
-          this._outputValue &&
-          elementButton.id !== this._outputValue.toString()
-        ) {
+        if (context.parameters.OptionSetAttribute.raw === null)
+          this._outputValue = null;
+        else
+          this._outputValue = context.parameters.OptionSetAttribute.raw;
+
+        if (this._outputValue && elementButton.id !== this._outputValue.toString()) {
           elementButton.style.background = "#6f6f6f";
-        } else if (
-          this._outputValue &&
-          elementButton.id === this._outputValue.toString()
-        ) {
+        } else if (this._outputValue && elementButton.id === this._outputValue.toString()) {
           if (this.optionSetArray) {
             var result = this.optionSetArray.filter((obj) => {
               return obj.Value === parseInt(elementButton.id);
